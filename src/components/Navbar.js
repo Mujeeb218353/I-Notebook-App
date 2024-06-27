@@ -30,11 +30,13 @@ function Navbar  ()  {
                         {
                             !localStorage.getItem('token') ?
                                 <div className={'d-flex p-1 justify-content-around'}>
-                                    <Link className="btn btn-primary mx-3" to="/login" role="button">LogIn</Link>
-                                    <Link className="btn btn-primary" to="/signup" role="button">SignUp</Link>
+                                    <Link className={`btn btn-primary mx-2 ${location.pathname === "/login" ? "d-none" : ""}`} to="/login" role="button">LogIn</Link>
+                                    <Link className={`btn btn-primary mx-2 ${location.pathname === "/signup" ? "d-none" : ""}`} to="/signup" role="button">SignUp</Link>
                                 </div>
                                 :
-                                <button className={'btn btn-primary mx-3'} onClick={logout}>Log Out</button>
+                                <div className={'d-flex p-1 justify-content-around'}>
+                                    <button className={'btn btn-primary mx-3'} onClick={logout}>Log Out</button>
+                                </div>
                         }
                     </div>
                 </div>

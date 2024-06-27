@@ -2,7 +2,6 @@ import noteContext from "./noteContext";
 import {useState} from "react";
 const NoteState = (props) => {
     let host = process.env.REACT_APP_BACKEND_URI || "http://localhost:8080";
-    console.log(host);
     const [notes, setNotes] = useState([]);
     const getNote = async () => {
         let url = `${host}/api/notes/fetchallnotes`;
