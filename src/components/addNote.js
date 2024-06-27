@@ -15,7 +15,7 @@ function AddNote(props) {
         setNote({ ...note, [e.target.name]: e.target.value });
     };
     return (
-        <div>
+        <div className="mt-5">
             <h1>Add a Note</h1>
             <form>
                 <div className="mb-3">
